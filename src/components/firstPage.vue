@@ -57,7 +57,7 @@ export default {
             prikazi_anlegen: false,
             prikazi_speichern: false,
             prikazi_abbrechen:false,
-            isBearbeitet: false
+           // isBearbeitet: false
           
 
         }
@@ -169,11 +169,13 @@ export default {
         },
         userMod(){
              localStorage.setItem('people',JSON.stringify(this.people));
-            
+             localStorage.setItem('isOrg',0)
+             localStorage.removeItem('isBearbeitet')
         },
         userBearbeiten (){
-         
-  this.isBearbeitet=!this.isBearbeitet;
+    //     console.log("isBearbeitet1" + this.isBearbeitet);
+ // this.isBearbeitet=!this.isBearbeitet;
+  //  console.log("isBearbeitet2" + this.isBearbeitet);
             let myObj =
  {
        "name": {
@@ -191,23 +193,24 @@ export default {
         },
       "email":  document.getElementById("editEmail").value,
       "picture": {
-        
+    
         "medium":this.people.picture.medium
       }                    
       
   };
      
-    localStorage.setItem('neu', JSON.stringify(myObj));
-  
+     localStorage.setItem('neu', JSON.stringify(myObj));
+     localStorage.setItem('isBearbeitet',1)
            
         }
        
      
        
     },
- created: function() {
-    // event.preventDefault();
-    if (this.isBearbeitet===true){
+ mounted: function() {
+ //   event.preventDefault();
+ //console.log("nove"+this.isBearbeitet);
+    if (localStorage.isBearbeitet){
        if(localStorage.neu){
             this.people=JSON.parse(localStorage.neu);
         }
