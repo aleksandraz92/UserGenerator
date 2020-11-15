@@ -1,0 +1,212 @@
+@mixin flexCenter($direction){
+    display:flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+}
+@mixin placeProperties(){
+
+    padding:10px;
+    margin :1.5%;
+    background: #F1F2F6 0% 0% no-repeat padding-box;
+    border-radius: 15px;
+    opacity: 1;
+    border:none;
+    margin-bottom: -30px;
+    height: 60px;
+}
+@mixin fontProperties(){
+    font: normal normal 600 1rem Public Sans;
+    letter-spacing: 0px;
+    color: #222222;
+    opacity: 0.5;
+    margin:3%;
+}
+.form{
+    @include flexCenter(column);
+    width: 1920px;
+    height: 1080px;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    opacity: 1;
+    
+    }
+    .flexbox-container{
+        top: 147px;
+        left: 644px;
+        width: 700px;
+        height: 850px;
+        @include flexCenter(column);
+        
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 48px #22222214;
+        border-radius: 30px;
+        opacity: 1;
+    }
+    .flexbox-item{
+        
+      
+      
+        font: normal normal 600 16px/19px Public Sans;
+        letter-spacing: 0px;
+        color: #222222;
+        opacity: 0.5;
+        margin:3%;
+        
+    }
+    
+    
+    .avatar {
+        width: 170px;
+        display:block;
+        height: 170px;
+        background: #F1F2F6 0% 0% no-repeat padding-box;
+        border: 10px solid #2222221A;
+        border-radius: 130px;
+        opacity: 1;
+        margin-top: -20px;
+        
+    }
+    .flexbox-item-name{
+        @include flexCenter(row);
+        @include fontProperties();
+      
+       
+    }
+    .form-control-name{
+        width: 260px;
+
+        @include flexCenter(row);
+        @include placeProperties();
+      
+    }
+    .flexbox-item-email{
+        @include flexCenter(row);
+        @include fontProperties();
+       
+    }
+    .form-control-email{
+        
+        @include placeProperties();    
+    
+    width: 540px;
+    
+    }
+    .flexbox-item-address{
+        @include flexCenter(row);
+        @include fontProperties();
+        
+    }
+    .form-control-address1{
+        width: 398px;
+        @include placeProperties();
+    }
+    .form-control-address{
+        @include placeProperties();
+            width: 122px;
+         
+    }
+    .flexbox-item-place{
+        @include flexCenter(row);
+        @include fontProperties();
+      
+    }
+    .form-control-ort1{
+        width: 208px;
+        @include placeProperties();
+      }
+      .form-control-ort{
+        @include placeProperties();
+       
+    width: 312px;
+    }
+    .btnUser{
+       
+        width: 540px;
+        margin-top: 30px;
+        height: 70px;
+        background: transparent linear-gradient(263deg, #B9B9B9 0%, #9F9F9F 100%) 0% 0% no-repeat padding-box;
+        border-radius: 15px;
+        opacity: 1;
+        text-align: center;
+        font: normal normal 600 16px/19px Public Sans;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        border:none;
+    }
+
+    .btn-user2{
+       
+        width: 540px;
+        margin-top: 30px;
+        height: 70px;
+        background: transparent linear-gradient(264deg, #1DD1A1 0%, #10AC84 100%) 0% 0% no-repeat padding-box;
+        border-radius: 15px;
+        opacity: 1;
+        text-align: center;
+        font: normal normal 600 16px/19px Public Sans;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        border:none;
+        }
+       
+     .btn-user-bearbeiten{
+          
+        width:220px;
+        margin-top: 30px;
+        height: 70px;
+        border: 2px solid #10AC84;
+        border-radius: 15px;
+        opacity: 1;
+        /* text*/
+        text-align:center;
+        font: normal normal 600 16px/19px Public Sans;
+        letter-spacing: 0px;
+        color: #10AC84;
+        opacity: 1;
+         } 
+ .btn-user-abbrechen {
+            width:220px;
+            margin-top: 30px;
+            height: 70px;
+            border: 2px solid #10AC84;
+            border-radius: 15px;
+            opacity: 1;
+            /* text*/
+            text-align:center;
+            font: normal normal 600 16px/19px Public Sans;
+            letter-spacing: 0px;
+            color: #10AC84;
+            opacity: 1;  
+        }
+    .btn-user-anlegen{
+       
+
+        width:220px;
+        margin-top: 30px;
+        height: 70px;
+        background: transparent linear-gradient(257deg, #1DD1A1 0%, #10AC84 100%) 0% 0% no-repeat padding-box;
+        border-radius: 15px;
+        opacity: 1;
+        text-align: center;
+        border:none;
+        font: normal normal 600 16px/19px Public Sans;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+         }
+      .btn-user-speichern{
+        width:220px;
+        margin-top: 30px;
+        height: 70px;
+        background: transparent linear-gradient(257deg, #1DD1A1 0%, #10AC84 100%) 0% 0% no-repeat padding-box;
+        border-radius: 15px;
+        opacity: 1;
+        text-align: center;
+        border:none;
+        font: normal normal 600 16px/19px Public Sans;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;  
+      }   
