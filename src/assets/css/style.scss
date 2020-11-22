@@ -6,35 +6,46 @@
 }
 @mixin placeProperties(){
 
-    padding:10px;
-    margin :1.5%;
+    padding:.7rem;
+    margin :.3rem;
     background: #F1F2F6 0% 0% no-repeat padding-box;
     border-radius: 15px;
     opacity: 1;
     border:none;
-    margin-bottom: -30px;
-    height: 60px;
+    margin-bottom: .1rem;
+    height: 3.75rem;;
+}
+@mixin placeEdit(){
+
+    padding:.7rem;
+    margin :.3rem;
+     border:none;
+            border-bottom: 1px solid ;
+            border-color: #10AC84;
+    border:none;
+    margin-bottom: .1rem;
+    height: 3.75rem;;
 }
 @mixin fontProperties(){
     font: normal normal 600 1rem Public Sans;
     letter-spacing: 0px;
     color: #222222;
     opacity: 0.5;
-    margin:3%;
+    margin:0.2rem;
 }
 .form{
     @include flexCenter(column);
-    width: 1920px;
-    height: 1080px;
+    width:120rem;
+    height: 68rem;
     background: #F9F9F9 0% 0% no-repeat padding-box;
     opacity: 1;
     
     }
     .flexbox-container{
-        top: 147px;
-        left: 644px;
-        width: 700px;
-        height: 850px;
+       // top: 147px;
+      //  left: 644px;
+        width: 43rem;
+        height: 53rem;
         @include flexCenter(column);
         
         background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -56,14 +67,15 @@
     
     
     .avatar {
-        width: 170px;
+        width: 11rem;
         display:block;
-        height: 170px;
+        height: 11rem;
         background: #F1F2F6 0% 0% no-repeat padding-box;
         border: 10px solid #2222221A;
         border-radius: 130px;
         opacity: 1;
-        margin-top: -20px;
+     
+        margin-bottom: 1rem;
         
     }
     .flexbox-item-name{
@@ -73,7 +85,7 @@
        
     }
     .form-control-name{
-        width: 260px;
+        width: 17rem;
 
         @include flexCenter(row);
         @include placeProperties();
@@ -88,7 +100,7 @@
         
         @include placeProperties();    
     
-    width: 540px;
+    width: 36rem;
     
     }
     .flexbox-item-address{
@@ -97,12 +109,12 @@
         
     }
     .form-control-address1{
-        width: 398px;
+        width:26rem;
         @include placeProperties();
     }
     .form-control-address{
         @include placeProperties();
-            width: 122px;
+            width: 8rem;
          
     }
     .flexbox-item-place{
@@ -111,24 +123,33 @@
       
     }
     .form-control-ort1{
-        width: 208px;
+        width:13rem;
         @include placeProperties();
       }
       .form-control-ort{
         @include placeProperties();
        
-    width: 312px;
+    width: 21rem;
+    }
+    .dugme3{
+        @include flexCenter(row);
+       margin-top:1rem;
+        
+    }
+    #dugme4{
+        @include flexCenter(row);
+        margin-top:1rem;
     }
     .btnUser{
        
-        width: 540px;
-        margin-top: 30px;
-        height: 70px;
+        width: 37rem;
+        margin-top: 1rem;
+        height: 5rem;
         background: transparent linear-gradient(263deg, #B9B9B9 0%, #9F9F9F 100%) 0% 0% no-repeat padding-box;
         border-radius: 15px;
         opacity: 1;
         text-align: center;
-        font: normal normal 600 16px/19px Public Sans;
+        font: normal normal 600 1rem Public Sans;
         letter-spacing: 0px;
         color: #FFFFFF;
         opacity: 1;
@@ -137,9 +158,9 @@
 
     .btn-user2{
        
-        width: 540px;
-        margin-top: 30px;
-        height: 70px;
+        width: 37rem;
+        margin-top: 1rem;
+        height: 5rem;
         background: transparent linear-gradient(264deg, #1DD1A1 0%, #10AC84 100%) 0% 0% no-repeat padding-box;
         border-radius: 15px;
         opacity: 1;
@@ -152,24 +173,30 @@
         }
        
      .btn-user-bearbeiten{
-          
-        width:220px;
-        margin-top: 30px;
-        height: 70px;
+      
+        width :18.2rem;
+        padding:.9rem;
+        margin:.3rem;
+        margin-top: 1rem;
+        height: 5rem;
         border: 2px solid #10AC84;
         border-radius: 15px;
         opacity: 1;
+        
         /* text*/
         text-align:center;
-        font: normal normal 600 16px/19px Public Sans;
+        font: normal normal 600 1rem Public Sans;
         letter-spacing: 0px;
         color: #10AC84;
         opacity: 1;
          } 
  .btn-user-abbrechen {
-            width:220px;
-            margin-top: 30px;
-            height: 70px;
+  
+            width :18.2rem;
+            padding:.9rem;
+            margin:.3rem;
+            margin-top: 1rem;
+            height:5rem;
             border: 2px solid #10AC84;
             border-radius: 15px;
             opacity: 1;
@@ -182,10 +209,11 @@
         }
     .btn-user-anlegen{
        
-
-        width:220px;
-        margin-top: 30px;
-        height: 70px;
+        padding:.9rem;
+        margin:.3rem;
+        width:18.2rem;
+     
+        height: 5rem;
         background: transparent linear-gradient(257deg, #1DD1A1 0%, #10AC84 100%) 0% 0% no-repeat padding-box;
         border-radius: 15px;
         opacity: 1;
@@ -197,9 +225,14 @@
         opacity: 1;
          }
       .btn-user-speichern{
-        width:220px;
-        margin-top: 30px;
-        height: 70px;
+        @include flexCenter(row);
+        @include placeProperties();
+        @include flexCenter(row);
+        width :18.2rem;
+        padding:.9rem;
+        margin:.3rem;
+        margin-top:1rem;
+        height: 5rem;
         background: transparent linear-gradient(257deg, #1DD1A1 0%, #10AC84 100%) 0% 0% no-repeat padding-box;
         border-radius: 15px;
         opacity: 1;

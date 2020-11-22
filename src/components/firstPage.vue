@@ -23,17 +23,16 @@
             <input type="text" id="editOrt"  placeholder="Ort" v-model="city" class="form-control-ort" readonly>
         </div>
         <button v-if="prikazi_prvi" v-on:click="fetchPeople" class="btnUser">User generieren</button>
-        <button v-if="prikazi_drugi" v-on:click="doSmth" class="btn-user2">User generieren</button>
-        
-   
+       <button v-if="prikazi_drugi" v-on:click="doSmth" class="btn-user2">User generieren</button>
+        <div class="dugme3">
         <button v-if="prikazi_bearbeiten" v-on:click="mojaFunkcija" class="btn-user-bearbeiten">User bearbeiten</button>
         <button v-if="prikazi_anlegen" v-on:click="userMod" class="btn-user-anlegen">User anlegen</button>
+        </div>
         
-        
-
+        <div id="dugme4">
          <button v-if="prikazi_speichern" v-on:click="userBearbeiten" class="btn-user-speichern">User speichern</button>
-         <button v-if="prikazi_abbrechen" v-on:click="doSmth"  class="btn-user-abbrechen">User abbrechen</button>
-
+         <button v-if="prikazi_abbrechen" v-on:click="userMod"  class="btn-user-abbrechen">User abbrechen</button>
+        </div>
     </form>
   </section>
 
@@ -58,7 +57,7 @@ export default {
             prikazi_speichern: false,
             prikazi_abbrechen:false,
            // isBearbeitet: false
-          
+       //    slika:false
 
         }
     },
@@ -107,7 +106,7 @@ export default {
             return '';
         },
           photo(){
-            if(this.people && this.people.picture && this.people.picture.medium ){
+            if( this.people && this.people.picture && this.people.picture.medium ){
                 return this.people.picture.medium;
             }
             return '@/src/assets/avatar_img2.jpg';
@@ -143,6 +142,8 @@ export default {
             });
            this.prikazi_prvi = false
            this.prikazi_drugi = true
+        //   this.slika=true
+          
         },
       doSmth(event){
         event.preventDefault();
@@ -150,18 +151,33 @@ export default {
               this.prikazi_drugi = false;
               this.prikazi_bearbeiten = true
               this.prikazi_anlegen = true
-
-           
+              
         },
         mojaFunkcija(event){
            event.preventDefault();
+        
            document.getElementById("editName").readOnly=false;
+           document.getElementById("editName").style.borderBottom="2px solid #10AC84";
+
            document.getElementById("editLastname").readOnly=false;
+           document.getElementById("editLastname").style.borderBottom="2px solid #10AC84";
+
            document.getElementById("editEmail").readOnly=false;
+           document.getElementById("editEmail").style.borderBottom="2px solid #10AC84";
+
+           
            document.getElementById("editOrt").readOnly=false;
+           document.getElementById("editOrt").style.borderBottom="2px solid #10AC84";
+
            document.getElementById("editPlz").readOnly=false;
+           document.getElementById("editPlz").style.borderBottom="2px solid #10AC84";
+
            document.getElementById("editStreet").readOnly=false;
+           document.getElementById("editStreet").style.borderBottom="2px solid #10AC84";
+
            document.getElementById("editHsnr").readOnly=false;
+           document.getElementById("editHsnr").style.borderBottom="2px solid #10AC84";
+
            this.prikazi_bearbeiten = false
            this.prikazi_anlegen =false
            this.prikazi_abbrechen=true
